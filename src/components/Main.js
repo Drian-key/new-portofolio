@@ -151,7 +151,7 @@ function Main(props) {
                 <img
                   src={japanstyle}
                   alt="japanstyle"
-                  className="h-72 w-full object-cover"
+                  className="h-52 md:h-56 lg:h-60 w-full object-cover"
                   ref={ref1.ref}
                 />
                 <div className="absolute p-4 flex gap-2 justify-end bottom-0 right-0">
@@ -188,7 +188,7 @@ function Main(props) {
                 <img
                   src={drbookshelf}
                   alt="drbookshelf"
-                  className="h-72 w-full object-cover"
+                  className="h-52 md:h-56 lg:h-60 w-full object-cover"
                   ref={ref2.ref}
                 />
                 <div className="absolute p-4 flex gap-2 justify-end bottom-0 right-0">
@@ -224,7 +224,7 @@ function Main(props) {
                 <img
                   src={smkn1kjb}
                   alt="smkn1kjb"
-                  className="h-72 w-full object-cover"
+                  className="h-52 md:h-56 lg:h-60 w-full object-cover"
                   ref={ref3.ref}
                 />
                 <div className="absolute p-4 flex gap-2 justify-end bottom-0 right-0">
@@ -256,7 +256,7 @@ function Main(props) {
                 <img
                   src={ababdotcom}
                   alt="ababdotcom"
-                  className="h-72 w-full object-cover"
+                  className="h-52 md:h-56 lg:h-60 w-full object-cover"
                   ref={ref4.ref}
                 />
                 <div className="absolute p-4 flex gap-2 justify-end bottom-0 right-0">
@@ -286,7 +286,7 @@ function Main(props) {
                 <img
                   src={lahshishop}
                   alt="lahshishop"
-                  className="h-72 w-full object-cover"
+                  className="h-52 md:h-56 lg:h-60 w-full object-cover"
                   ref={ref5.ref}
                 />
                 <div className="absolute p-4 flex gap-2 justify-end bottom-0 right-0">
@@ -321,7 +321,7 @@ function Main(props) {
                 <img
                   src={tchofilm}
                   alt="tchofilm"
-                  className="h-72 w-full object-cover"
+                  className="h-52 md:h-56 lg:h-60 w-full object-cover"
                   ref={ref6.ref}
                 />
                 <div className="absolute p-4 flex gap-2 justify-end bottom-0 right-0">
