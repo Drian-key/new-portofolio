@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import profile from "../assets/profile.png";
 
 // icon
@@ -20,6 +20,11 @@ import ababdotcom from "../assets/portofolio/ababdotcom.vercel.app_.png";
 import drbookshelf from "../assets/portofolio/drbookshelf.vercel.app_.png";
 import lahshishop from "../assets/portofolio/lahshishop.vercel.app_.png";
 import tchofilm from "../assets/portofolio/tchofilm.vercel.app_.png";
+import smkn1kjb from "../assets/portofolio/smknkejobong.sch.id_.png";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useParallax } from "react-scroll-parallax";
 
 function Main(props) {
   let icons = [
@@ -32,10 +37,36 @@ function Main(props) {
     laravel,
   ];
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  const ref1 = useParallax({
+    scale: [1, 1.1, "easeInQuad"],
+  });
+  const ref2 = useParallax({
+    scale: [1, 1.1, "easeInQuad"],
+  });
+  const ref3 = useParallax({
+    scale: [1, 1.1, "easeInQuad"],
+  });
+  const ref4 = useParallax({
+    scale: [1, 1.1, "easeInQuad"],
+  });
+  const ref5 = useParallax({
+    scale: [1, 1.1, "easeInQuad"],
+  });
+  const ref6 = useParallax({
+    scale: [1, 1.1, "easeInQuad"],
+  });
+
   return (
-    <div className="bg-dark text-white" id="hero">
+    <div className="bg-dark text-white overflow-hidden" id="hero">
       <div id="about" className="mt-10 container px-4 lg:px-28">
-        <h2 className="font-poppins text-2xl font-bold text-center lg:text-3xl">
+        <h2
+          data-aos="zoom-out-up"
+          data-aos-duration="1000"
+          className="font-poppins text-2xl font-bold text-center lg:text-3xl">
           About Me
         </h2>
         <div className="md:flex md:items-center">
@@ -59,7 +90,11 @@ function Main(props) {
               Thank you for your attention, and I look forward to creating
               exceptional and captivating web experiences!
             </p>
-            <div id="soccial" className="flex gap-4 mt-2 md:text-lg">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              id="soccial"
+              className="flex gap-4 mt-2 md:text-lg">
               <a
                 href="https://github.com/drian-key"
                 className="border rounded-lg px-2 py-1"
@@ -88,7 +123,9 @@ function Main(props) {
 
       <div id="skills" className="mt-10 bg-[#121212] px-4 pb-10 pt-8">
         <div className="container">
-          <h2 className="font-poppins text-2xl font-bold text-center lg:text-3xl">
+          <h2
+            data-aos="zoom-out-up"
+            className="font-poppins text-2xl font-bold text-center lg:text-3xl">
             My Skills
           </h2>
           <div className="flex flex-wrap mt-5 gap-4 justify-center">
@@ -102,7 +139,9 @@ function Main(props) {
       </div>
 
       <div id="projects" className="mt-10 container px-4 lg:px-28 lg:mb-10">
-        <h2 className="font-poppins text-2xl font-bold text-center lg:text-3xl">
+        <h2
+          data-aos="zoom-out-up"
+          className="font-poppins text-2xl font-bold text-center lg:text-3xl">
           My Projects
         </h2>
         <div className="flex flex-wrap mt-5">
@@ -112,7 +151,8 @@ function Main(props) {
                 <img
                   src={japanstyle}
                   alt="japanstyle"
-                  className="h-64 w-full object-cover"
+                  className="h-72 w-full object-cover"
+                  ref={ref1.ref}
                 />
                 <div className="absolute p-4 flex gap-2 justify-end bottom-0 right-0">
                   <div className="w-[12%] flex bg-slate-200 p-1 rounded-lg">
@@ -148,7 +188,8 @@ function Main(props) {
                 <img
                   src={drbookshelf}
                   alt="drbookshelf"
-                  className="h-64 w-full object-cover"
+                  className="h-72 w-full object-cover"
+                  ref={ref2.ref}
                 />
                 <div className="absolute p-4 flex gap-2 justify-end bottom-0 right-0">
                   <div className="w-[12%] flex bg-slate-200 p-1 rounded-lg">
@@ -169,20 +210,54 @@ function Main(props) {
                   intermediate web storage in JavaScript.
                 </p>
                 <div className="mb-4 float-right hover:animate-pulse transition duration-500 ease-in-out">
-                  <a href="https://drbookshelf.vercel.app/">
+                  <a target="_blank" href="https://drbookshelf.vercel.app/">
                     <img src={globe} alt="view web" />
                   </a>
                 </div>
               </div>
             </div>
           </div>
+
+          <div className="w-full mb-5 md:mb-0 md:w-1/2 lg:w-1/3 md:p-3">
+            <div className="bg-slate-800 rounded-xl overflow-clip">
+              <div className="relative">
+                <img
+                  src={smkn1kjb}
+                  alt="smkn1kjb"
+                  className="h-72 w-full object-cover"
+                  ref={ref3.ref}
+                />
+                <div className="absolute p-4 flex gap-2 justify-end bottom-0 right-0">
+                  <div className="w-[12%] flex bg-slate-200 p-1 rounded-lg">
+                    <img src={wordpress} alt="wordpress" />
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 pb-10">
+                <h3 className="mb-2 font-bold text-lg">
+                  SMK Negeri 1 Kejobong
+                </h3>
+                <p className="text-gray-300">
+                  I created a website for my SMK Negeri 1 Kejobong using
+                  Wordpress and Elementor.
+                </p>
+                <div className="mb-4 float-right hover:animate-pulse transition duration-500 ease-in-out">
+                  <a target="_blank" href="https://smknegeri1kejobong/">
+                    <img src={globe} alt="view web" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="w-full mb-5 md:mb-0 md:w-1/2 lg:w-1/3 md:p-3">
             <div className="bg-slate-800 rounded-xl overflow-clip">
               <div className="relative">
                 <img
                   src={ababdotcom}
                   alt="ababdotcom"
-                  className="h-64 w-full object-cover"
+                  className="h-72 w-full object-cover"
+                  ref={ref4.ref}
                 />
                 <div className="absolute p-4 flex gap-2 justify-end bottom-0 right-0">
                   <div className="w-[12%] flex bg-slate-200 p-1 rounded-lg">
@@ -197,7 +272,7 @@ function Main(props) {
                   framework.
                 </p>
                 <div className="mb-4 float-right hover:animate-pulse transition duration-500 ease-in-out">
-                  <a href="https://ababdotcom.vercel.app/">
+                  <a target="_blank" href="https://ababdotcom.vercel.app/">
                     <img src={globe} alt="view web" />
                   </a>
                 </div>
@@ -211,7 +286,8 @@ function Main(props) {
                 <img
                   src={lahshishop}
                   alt="lahshishop"
-                  className="h-64 w-full object-cover"
+                  className="h-72 w-full object-cover"
+                  ref={ref5.ref}
                 />
                 <div className="absolute p-4 flex gap-2 justify-end bottom-0 right-0">
                   <div className="w-[12%] flex bg-slate-200 p-1 rounded-lg">
@@ -232,7 +308,7 @@ function Main(props) {
                   learning CSS grid.
                 </p>
                 <div className="mb-4 float-right hover:animate-pulse transition duration-500 ease-in-out">
-                  <a href="https://drbookshelf.vercel.app/">
+                  <a target="_blank" href="https://lahshishop.vercel.app/">
                     <img src={globe} alt="view web" />
                   </a>
                 </div>
@@ -245,7 +321,8 @@ function Main(props) {
                 <img
                   src={tchofilm}
                   alt="tchofilm"
-                  className="h-64 w-full object-cover"
+                  className="h-72 w-full object-cover"
+                  ref={ref6.ref}
                 />
                 <div className="absolute p-4 flex gap-2 justify-end bottom-0 right-0">
                   <div className="w-[12%] flex bg-slate-200 p-1 rounded-lg">
@@ -263,7 +340,7 @@ function Main(props) {
                   utilizing JavaScript and Bootstrap.
                 </p>
                 <div className="mb-4 float-right hover:animate-pulse transition duration-500 ease-in-out">
-                  <a href="https://tchofilm.vercel.app/">
+                  <a target="_blank" href="https://tchofilm.vercel.app/">
                     <img src={globe} alt="view web" />
                   </a>
                 </div>

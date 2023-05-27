@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Contact(props) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div id="contact" className="bg-black text-white">
+    <div id="contact" className="bg-black text-white overflow-hidden">
       <div className="container mt-5 pt-5 pb-6 px-4">
-        <h3 className="font-poppins text-2xl font-bold text-center lg:text-3xl">
+        <h3
+          data-aos="zoom-out-up"
+          data-aos-duration="1000"
+          className="font-poppins text-2xl font-bold text-center lg:text-3xl">
           Contact Me
         </h3>
         <form className="font-roboto text-gray-900">
