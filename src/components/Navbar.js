@@ -20,7 +20,7 @@ export default function Navbar() {
           />
         </button>
         <nav
-          className={`bg-dark h-screen w-full fixed top-0 left-0 z-[55] ${
+          className={`bg-dark h-screen w-full fixed top-0 left-0 z-[101] ${
             hamburger ? "hidden" : null
           } sm:flex sm:relative sm:bg-transparent sm:h-0 sm:justify-end`}>
           <span
