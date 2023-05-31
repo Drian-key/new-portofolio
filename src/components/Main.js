@@ -242,7 +242,7 @@ function Main(props) {
                   Wordpress and Elementor.
                 </p>
                 <div className="mb-4 float-right hover:animate-pulse transition duration-500 ease-in-out">
-                  <a target="_blank" href="https://smknegeri1kejobong/">
+                  <a target="_blank" href="https://smknkejobong.sch.id/">
                     <img src={globe} alt="view web" />
                   </a>
                 </div>
